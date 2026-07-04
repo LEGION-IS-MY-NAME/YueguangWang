@@ -16,7 +16,6 @@ Runtime data is stored in Home Assistant's app data directory and survives resta
 
 | Option | Default | Description |
 | --- | --- | --- |
-| `bind_address` | `127.0.0.1:8081` | Internal Moonlight Web address behind the add-on ingress proxy. |
 | `webrtc_port_range` | `40000:40100` | UDP port range used by WebRTC. |
 | `webrtc_nat_1to1_host` | empty | Optional LAN or public IP advertised to WebRTC peers. |
 | `log_level` | `info` | Runtime log level. |
@@ -25,3 +24,5 @@ Runtime data is stored in Home Assistant's app data directory and survives resta
 ## Network Notes
 
 The app runs with host networking so WebRTC UDP ports can be used directly. If streaming from outside your LAN, configure port forwarding or a TURN server as described by Moonlight Web Stream.
+
+Moonlight Web is bound internally to `127.0.0.1:8081`. The add-on proxy listens on `8080` for Home Assistant ingress and direct access.
