@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.10.4
+
+- Disable nginx buffering for streaming API endpoints used by host listing, pairing, and streaming.
+- Document the required Sunshine host address format.
+
 ## 2.10.3
 
 - Move Moonlight Web's internal bind port to `18081` to avoid host-network conflicts.

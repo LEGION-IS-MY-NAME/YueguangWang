@@ -10,6 +10,8 @@ Yueguang Wang packages Moonlight Web Stream as a Home Assistant app. It provides
 4. Create the first user. The first created user becomes the admin.
 5. Add and pair your Sunshine host from the Moonlight Web interface.
 
+When adding a host, enter only the host name or IP address in the address field, for example `192.168.1.50`. Do not include `http://`, `https://`, a trailing slash, or a path. Leave the port empty for Sunshine's default Moonlight/Gamestream HTTP port, or set it to `47989`. Do not use Sunshine's web UI port.
+
 Runtime data is stored in Home Assistant's app data directory and survives restarts, updates, and backups.
 
 ## Options
