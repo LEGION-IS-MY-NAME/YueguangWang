@@ -24,7 +24,7 @@ option() {
 }
 
 export BIND_ADDRESS
-BIND_ADDRESS="127.0.0.1:8081"
+BIND_ADDRESS="127.0.0.1:18081"
 
 export WEBRTC_PORT_RANGE
 WEBRTC_PORT_RANGE="$(option webrtc_port_range "40000:40100")"
@@ -75,12 +75,12 @@ http {
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "upgrade";
             proxy_set_header Host $host;
-            proxy_pass http://127.0.0.1:8081;
+            proxy_pass http://127.0.0.1:18081;
         }
 
         location / {
             proxy_set_header Host $host;
-            proxy_pass http://127.0.0.1:8081;
+            proxy_pass http://127.0.0.1:18081;
         }
     }
 }
@@ -97,18 +97,18 @@ trap cleanup EXIT INT TERM
 for _ in $(seq 1 50); do
     if ! kill -0 "${app_pid}" 2>/dev/null; then
         echo "Moonlight Web exited before it opened its internal port." >&2
-        wait "${app_pid}"
+        wait "${app_pid}" || exit $?
     fi
 
-    if curl -fsS --max-time 1 http://127.0.0.1:8081/config.js >/dev/null 2>&1; then
+    if curl -fsS --max-time 1 http://127.0.0.1:18081/config.js >/dev/null 2>&1; then
         break
     fi
 
     sleep 0.2
 done
 
-if ! curl -fsS --max-time 1 http://127.0.0.1:8081/config.js >/dev/null 2>&1; then
-    echo "Moonlight Web did not become ready on 127.0.0.1:8081." >&2
+if ! curl -fsS --max-time 1 http://127.0.0.1:18081/config.js >/dev/null 2>&1; then
+    echo "Moonlight Web did not become ready on 127.0.0.1:18081." >&2
     exit 1
 fi
 

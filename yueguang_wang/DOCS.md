@@ -25,4 +25,4 @@ Runtime data is stored in Home Assistant's app data directory and survives resta
 
 The app runs with host networking so WebRTC UDP ports can be used directly. If streaming from outside your LAN, configure port forwarding or a TURN server as described by Moonlight Web Stream.
 
-Moonlight Web is bound internally to `127.0.0.1:8081`. The add-on proxy listens on `8080` for Home Assistant ingress and direct access.
+Moonlight Web is bound internally to `127.0.0.1:18081`. The add-on proxy listens on `8080` for Home Assistant ingress and direct access.

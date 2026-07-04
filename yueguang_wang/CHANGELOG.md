@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.10.3
+
+- Move Moonlight Web's internal bind port to `18081` to avoid host-network conflicts.
+- Stop immediately if Moonlight Web exits during startup.
+
 ## 2.10.2
 
 - Harden startup by waiting for Moonlight Web before launching the ingress proxy.
