@@ -16,11 +16,11 @@ Runtime data is stored in Home Assistant's app data directory and survives resta
 
 | Option | Default | Description |
 | --- | --- | --- |
-| `bind_address` | `0.0.0.0:8080` | Address and port used by the web server. |
+| `bind_address` | `127.0.0.1:8081` | Internal Moonlight Web address behind the add-on ingress proxy. |
 | `webrtc_port_range` | `40000:40100` | UDP port range used by WebRTC. |
 | `webrtc_nat_1to1_host` | empty | Optional LAN or public IP advertised to WebRTC peers. |
 | `log_level` | `info` | Runtime log level. |
-| `path_prefix` | empty | Optional URL prefix for reverse proxy setups. Leave empty for normal Home Assistant ingress. |
+| `path_prefix` | empty | Reserved for direct reverse proxy setups. Home Assistant ingress is detected automatically. |
 
 ## Network Notes
 

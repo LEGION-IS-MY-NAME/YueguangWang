@@ -1,6 +1,6 @@
 ---
 name: Yueguang Wang
-version: 2.10.0
+version: 2.10.1
 slug: yueguang_wang
 description: Moonlight Web Stream packaged as a Home Assistant app.
 url: https://github.com/LEGION-IS-MY-NAME/YueguangWang
@@ -23,7 +23,7 @@ ports_description:
 map:
   - addon_config:rw
 options:
-  bind_address: "0.0.0.0:8080"
+  bind_address: "127.0.0.1:8081"
   webrtc_port_range: "40000:40100"
   webrtc_nat_1to1_host: ""
   log_level: "info"

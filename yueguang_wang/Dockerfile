@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR ${MOONLIGHT_WEB_PATH}
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates curl jq tar \
+    && apt-get install -y --no-install-recommends ca-certificates curl jq nginx tar \
     && rm -rf /var/lib/apt/lists/*
 
 RUN case "${BUILD_ARCH}" in \

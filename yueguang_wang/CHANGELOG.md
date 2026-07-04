@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.10.1
+
+- Fix Home Assistant ingress API calls by injecting the Supervisor ingress path into `config.js`.
+- Add nginx as a small ingress-aware front proxy while keeping Moonlight Web mounted at `/` internally.
+
 ## 2.10.0
 
 - Package Moonlight Web Stream `v2.10.0` as a Home Assistant app.
