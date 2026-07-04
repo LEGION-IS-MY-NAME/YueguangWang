@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.10.5
+
+- Add a direct `webui` URL for bypassing Home Assistant ingress during pairing and streaming tests.
+- Document direct access as the fallback path for streamed pairing failures.
+
 ## 2.10.4
 
 - Disable nginx buffering for streaming API endpoints used by host listing, pairing, and streaming.

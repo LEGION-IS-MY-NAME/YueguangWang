@@ -12,6 +12,8 @@ Yueguang Wang packages Moonlight Web Stream as a Home Assistant app. It provides
 
 When adding a host, enter only the host name or IP address in the address field, for example `192.168.1.50`. Do not include `http://`, `https://`, a trailing slash, or a path. Leave the port empty for Sunshine's default Moonlight/Gamestream HTTP port, or set it to `47989`. Do not use Sunshine's web UI port.
 
+If pairing fails through the Home Assistant sidebar with a stream abort error, test direct access at `http://HOME_ASSISTANT_IP:8080`. Direct access bypasses Home Assistant ingress while still using the same add-on container and Moonlight data. If direct access pairs correctly, the remaining problem is Home Assistant ingress handling the streamed pairing response.
+
 Runtime data is stored in Home Assistant's app data directory and survives restarts, updates, and backups.
 
 ## Options
